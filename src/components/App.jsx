@@ -10,7 +10,6 @@ export class App extends Component {
     good: 0,
     neutral: 0,
     bad: 0,
-    isFeedbackCleared: false,
   };
 
   updateFeedback = option => {
@@ -35,7 +34,6 @@ export class App extends Component {
       good: 0,
       neutral: 0,
       bad: 0,
-      isFeedbackCleared: true,
     });
   };
 
