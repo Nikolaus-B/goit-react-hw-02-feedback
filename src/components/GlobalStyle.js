@@ -44,7 +44,7 @@ code {
 export const Container = styled.div`
   text-align: center;
   margin: 20px auto 0 auto;
-  max-width: 400px;
+  max-width: 500px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;

@@ -1,15 +1,23 @@
+import {
+  StatisticButton,
+  StatisticContainer,
+  StatisticText,
+} from './Statistic.styled';
+
 export const Statistics = ({
   good,
   neutral,
   bad,
   total,
   positivePercentage,
+  clearStatistic,
 }) => (
-  <>
-    <p>Good: {good}</p>
-    <p>Neutral: {neutral}</p>
-    <p>Bad: {bad}</p>
-    <p>Total: {total}</p>
-    <p>Positive feedback: {positivePercentage}%</p>
-  </>
+  <StatisticContainer>
+    <StatisticText>Good: {good}</StatisticText>
+    <StatisticText>Neutral: {neutral}</StatisticText>
+    <StatisticText>Bad: {bad}</StatisticText>
+    <StatisticText>Total: {total}</StatisticText>
+    <StatisticText>Positive feedback: {positivePercentage}%</StatisticText>
+    <StatisticButton onClick={clearStatistic}>Clear Feedback</StatisticButton>
+  </StatisticContainer>
 );

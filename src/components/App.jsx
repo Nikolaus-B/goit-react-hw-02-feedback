@@ -10,6 +10,7 @@ export class App extends Component {
     good: 0,
     neutral: 0,
     bad: 0,
+    isFeedbackCleared: false,
   };
 
   updateFeedback = option => {
@@ -27,6 +28,15 @@ export class App extends Component {
     const { good } = this.state;
     const total = this.countTotalFeedback();
     return total > 0 ? ((good / total) * 100).toFixed(0) : 0;
+  };
+
+  clearStatistic = () => {
+    this.setState({
+      good: 0,
+      neutral: 0,
+      bad: 0,
+      isFeedbackCleared: true,
+    });
   };
 
   render() {
@@ -51,6 +61,7 @@ export class App extends Component {
               bad={bad}
               total={total}
               positivePercentage={positivePercentage}
+              clearStatistic={this.clearStatistic}
             />
           ) : (
             <Notification message="There is no feedback" />
